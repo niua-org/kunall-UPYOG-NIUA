@@ -28,9 +28,20 @@ import { initBillsComponents, BillsModule } from "@upyog/digit-ui-module-bills";
 
 // import { PGRModule, PGRLinks } from "@upyog/digit-ui-module-pgr";
 // import { Body, TopBar } from "@upyog/digit-ui-react-components";
-import "@upyog-niua/upyog-css/example/index.css";
+import "@nudmcdgnpm/upyog-css";
 
-import { PTRModule, PTRLinks, PTRComponents } from "@upyog-niua/upyog-ui-module-ptr";
+import { PTRModule, PTRLinks, PTRComponents } from "@nudmcdgnpm/upyog-ui-module-ptr";
+import { ASSETComponents, ASSETLinks, ASSETModule } from "@nudmcdgnpm/upyog-ui-module-asset";
+
+import { 
+  EWModule, 
+  EWLinks, 
+  EWComponents }
+  from "@nudmcdgnpm/upyog-ui-module-ew";
+
+import { SVComponents, SVLinks, SVModule } from "@nudmcdgnpm/upyog-ui-module-sv";
+import {CHBModule,CHBLinks,CHBComponents} from "@nudmcdgnpm/upyog-ui-module-chb";
+import {ADSModule,ADSLinks,ADSComponents} from "@nudmcdgnpm/upyog-ui-module-ads";
 
 
 // import * as comps from "@upyog/digit-ui-react-components";
@@ -65,7 +76,12 @@ const enabledModules = [
   "FireNoc",
   "Birth",
   "Death",
-  "PTR"
+  "PTR",
+  "ASSET",
+  "ADS",
+  "SV",
+  "EW",
+  "CHB"
 ];
 
 const initTokens = (stateCode) => {
@@ -111,9 +127,24 @@ const initDigitUI = () => {
     BillsModule,
     PTRModule, 
     PTRLinks, 
-    ...PTRComponents
+    ...PTRComponents,
     // TLModule,
     // TLLinks,
+    ASSETModule,
+    ASSETLinks,
+    ...ASSETComponents,
+    ADSLinks,
+  ADSModule,
+  ...ADSComponents,
+  SVModule,
+  SVLinks,
+  ...SVComponents,
+  EWModule,
+  EWLinks,
+  ...EWComponents,
+  CHBModule,
+  CHBLinks,
+  ...CHBComponents,
   });
 
   initFSMComponents();
